@@ -52,3 +52,4 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $route['default_controller'] = 'auth';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = false;
+// $route['reginashop'] = 'home/reginashop'; // HANDLE STATIC PAGE USING Admin Controller

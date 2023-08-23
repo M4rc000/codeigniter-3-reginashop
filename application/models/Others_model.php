@@ -22,6 +22,17 @@ class Others_model extends CI_Model
     {
         return $this->db->get_where('lainnya',['id' => $id])->row_array();
     }
+
+    // PAGINATION AND ACTIVE DATA
+    public function getOthers($limit,$start)
+    {
+        return $this->db->get_where('lainnya',['is_active' => 1],$limit,$start)->result_array();
+    }
+
+    public function countAllOthers()
+    {
+        return $this->db->get_where('lainnya',['is_active' => 1])->num_rows();
+    }
     // END OF READ DATA 
 
 
